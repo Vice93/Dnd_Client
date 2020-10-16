@@ -1,3 +1,5 @@
+import settings from '../settings.json'
+
 function client(endpoint, {body, ...customConfig} = {}) {
   const token = window.localStorage.getItem('__dnd_token__')
   const headers = {'content-type': 'application/json'}
@@ -15,9 +17,9 @@ function client(endpoint, {body, ...customConfig} = {}) {
   if (body) {
     config.body = JSON.stringify(body)
   }
-  console.log(process.env.API_URL)
+  console.log(settings.API_URL)
   return window
-    .fetch(`${process.env.API_URL || 'https://rollhub-api.azurewebsites.net'}/${endpoint}`, config)
+    .fetch(`${settings.API_URL || 'https://rollhub-api.azurewebsites.net'}/${endpoint}`, config)
     .then(r => r.json())
 }
 
