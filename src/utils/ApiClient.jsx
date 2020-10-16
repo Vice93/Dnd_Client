@@ -19,7 +19,7 @@ function client(endpoint, {body, ...customConfig} = {}) {
   }
   console.log(settings.API_URL)
   return window
-    .fetch(`${settings.API_URL || 'https://rollhub-api.azurewebsites.net'}/${endpoint}`, config)
+    .fetch(`${settings.API_URL}/v1/${endpoint}`, config)
     .then(r => r.json())
 }
 
