@@ -17,7 +17,7 @@ function client(endpoint, {body, ...customConfig} = {}) {
   }
 
   return window
-    .fetch(`http://localhost:3002/api/${endpoint}`, config) /* add localhost as appenv variable */ 
+    .fetch(`${process.env.SERVER_URL || 'localhost:3001'}/${endpoint}`, config)
     .then(r => r.json())
 }
 
