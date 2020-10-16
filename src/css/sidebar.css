@@ -1,0 +1,8 @@
+#sidebar, .MuiBackdrop-root, .MuiDrawer-paper {
+  top: 64px !important;
+}
+
+.MuiList-padding {
+  padding: 0 !important;
+}
+
