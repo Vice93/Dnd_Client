@@ -15,9 +15,9 @@ function client(endpoint, {body, ...customConfig} = {}) {
   if (body) {
     config.body = JSON.stringify(body)
   }
-  console.log(process.env.SERVER_URL)
+  console.log(process.env.API_URL)
   return window
-    .fetch(`${process.env.SERVER_URL || 'https://rollhub-api.azurewebsites.net'}/${endpoint}`, config)
+    .fetch(`${process.env.API_URL || 'https://rollhub-api.azurewebsites.net'}/${endpoint}`, config)
     .then(r => r.json())
 }
 
