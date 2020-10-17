@@ -3,12 +3,13 @@ const settingsFilePath = './src/settings.json'
 
 const setEnvironmentVariables = () => {
   if(process === undefined)
-    return console.log("process is undefined, cant save env.variables to settings.json");
+    return console.log('process is undefined, cant save env.variables to settings.json');
   
   const settings = readSettings()
   if(settings === null) return
 
-  settings.API_URL = process.env.API_URL || "http://localhost:8080"
+  settings.API_URL = process.env.API_URL || 'http://localhost:3001'
+  settings.API_VERSION = process.env.API_VERSION || 'v1'
   // more settings required on runtime
 
   writeSettings(settings)

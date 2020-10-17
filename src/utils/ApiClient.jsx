@@ -17,9 +17,9 @@ function client(endpoint, {body, ...customConfig} = {}) {
   if (body) {
     config.body = JSON.stringify(body)
   }
-  console.log(settings.API_URL)
+
   return window
-    .fetch(`${settings.API_URL}/v1/${endpoint}`, config)
+    .fetch(`${settings.API_URL}/${settings.API_VERSION}/${endpoint}`, config)
     .then(r => r.json())
 }
 

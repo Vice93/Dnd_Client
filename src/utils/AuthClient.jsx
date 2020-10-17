@@ -19,18 +19,18 @@ function getUser() {
   if (!token) {
     return Promise.resolve({user: null, message: ''})
   }
-  return client('me').catch(error => {
+  return client('user/me').catch(error => {
     logout()
     return Promise.reject({user: null, message: ''})
   })
 }
 
 function login({username, password}) {
-  return client('login', {body: {username, password}}).then(handleLoginResponse)
+  return client('user/login', {body: {username, password}}).then(handleLoginResponse)
 }
 
 function register({username, email, password}) {
-  return client('register', {body: {username, email, password}}).then(
+  return client('user/register', {body: {username, email, password}}).then(
     handleRegisterResponse,
   )
 }
