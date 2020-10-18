@@ -9,6 +9,7 @@ import LandingPage from '../components/LandingPage'
 import CustomThemeProvider from '../providers/CustomThemeProvider'
 import NotFound from '../components/NotFound'
 import Profile from '../components/Profile'
+import DieRoller from '../components/DieRoller'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           <Route path="/path" component={Test} />
           <Route path="/test" component={Test2} />
           <Route path="/about-us" component={AboutUs} />
+          <Route path="/roll" component={DieRoller} />
           <Route default component={NotFound}></Route>
         </Switch>
       </CustomThemeProvider>

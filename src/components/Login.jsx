@@ -81,7 +81,7 @@ export default function Login() {
               label="Password" type="password" id="password" autoComplete="current-password" />
             <Button fullWidth variant="contained" color="primary" onClick={signIn}>
               Sign in
-          </Button>
+            </Button>
             <Grid container className={classes.grid}>
               <Grid item xs>
                 <Button className={classes.button} color="secondary" component={Link} to="/forgot-password">

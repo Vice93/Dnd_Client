@@ -9,6 +9,7 @@ import ForgotPassword from "../components/ForgotPassword"
 import LandingPage from '../components/LandingPage'
 import CustomThemeProvider from '../providers/CustomThemeProvider'
 import NotFound from '../components/NotFound'
+import DieRoller from '../components/DieRoller'
 
 export default function Home(props) {
   return (
@@ -21,6 +22,7 @@ export default function Home(props) {
           <Route path="/about-us" component={AboutUs} />
           <Route path="/register" component={Register} />
           <Route path="/forgot-password" component={ForgotPassword} />
+          <Route path="/roll" component={DieRoller} />
           <Route default component={NotFound}></Route>
         </Switch>
       </CustomThemeProvider>
