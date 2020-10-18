@@ -34,6 +34,14 @@ export default function Sidebar() {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
+        <ListItem button component={Link} to="/roll">
+          <ListItemIcon>
+            <AccountCircle style={theme.palette.iconColor} />
+          </ListItemIcon>
+          <ListItemText primary="Dice roller" />
+        </ListItem>
+      </List>
+      <List>
         <ListItem button component={Link} to="/test">
           <ListItemIcon>
             <AccountCircle style={theme.palette.iconColor} />
